@@ -11,19 +11,6 @@ class MoviesSerializer(serializers.ModelSerializer):
         model = Movie
         fields = ['tmdb_id', 'imdb_id', 'original_language', 'original_title', 'title', 'runtime_', 'genre', 'poster', 'overview', 'tagline', 'prod_company', 'release_date', 'spoken_language']
   
-    # poster_path_ = serializers.SerializerMethodField(method_name='poster_link')
-    # def poster_link(self, movie: Movie):
-        # return f"https://image.tmdb.org/t/p/original{movie.poster_path}"
-    # id = serializers.IntegerField()
-    # tmdb_id = serializers.CharField(max_length=20)
-    # imdb_id = serializers.CharField(max_length=50)
-    # original_language = serializers.CharField(max_length=255)
-    # original_title = serializers.CharField(max_length=255)
-    # poster_path = serializers.CharField(max_length=255)
-    # # release_date = models.DateField()
-    # runtime = serializers.IntegerField()
-
-    
     title = serializers.SerializerMethodField(method_name='get_title')
     genre = serializers.SerializerMethodField(method_name='get_genre')    
     poster = serializers.SerializerMethodField(method_name='get_poster')
@@ -36,7 +23,6 @@ class MoviesSerializer(serializers.ModelSerializer):
 
     def get_runtime(self, movie: Movie):
         return f"{movie.runtime} min"
-    # data = get_movie_information(Movie.tmdb_id)
 
 
     def get_genre(self , movie : Movie):

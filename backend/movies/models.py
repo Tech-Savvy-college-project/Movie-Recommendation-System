@@ -7,12 +7,10 @@ class Movie(models.Model):
     imdb_id = models.CharField(max_length=50)
     original_language = models.CharField(max_length=255)
     original_title = models.CharField(max_length=255)
-#    poster_path = models.CharField(max_length=255)
-    # release_date = models.DateField()
     runtime = models.IntegerField()
 
     def __str__(self):
         return self.original_title
 
     class Meta:
-        ordering = ['original_title']
+        ordering = ['imdb_id']
