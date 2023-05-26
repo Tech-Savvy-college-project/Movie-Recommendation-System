@@ -1,0 +1,8 @@
+
+
+DB_NAME = "<db-name>"
+DB_HOST = "<db-hostname eg: localhost>"
+DB_USER = "<db-user>"
+DB_PASSWORD = "<db-password>"
+
+API_KEY_TMDB = "<tmdb-api key>"
