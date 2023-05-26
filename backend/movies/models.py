@@ -13,4 +13,4 @@ class Movie(models.Model):
         return self.original_title
 
     class Meta:
-        ordering = ['imdb_id']
+        ordering = ['-tmdb_id']
