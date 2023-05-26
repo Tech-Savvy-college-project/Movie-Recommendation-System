@@ -20,5 +20,5 @@ def get_movie_information(tmdb_id):
 
     response = requests.get(url)
     data = json.loads(response.text)
-    cache.set("movie_data",data)
+    cache.set("movie_data_{movie.tmdb_id}",data, timeout=3600)
     return data
