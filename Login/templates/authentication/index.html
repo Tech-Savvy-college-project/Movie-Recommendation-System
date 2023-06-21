@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Responsive Login Form Design</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+</head>
+<body>
+
+    {% for message in messages %}
+    <div class="alert-{{ message.tags}} alert-dismissible fade show" role="alert">
+    <strong> Message: </strong> {{ message }}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"> 
+    <span aria-hidden="true">&times;</span>
+    </button>
+
+    </div>
+               {% endfor %}
+
+             <h1> FRONT PAGE </h1>
+
+                {% if user.is_authenticated %}
+                <h1> Hello {{ fname }}</h1>
+                <h2> You are successfully logged in</h2>
+                <button type="submit"> <a href= "/signout">SIGN OUT</a></button>
+
+                {% else %}
+                <button type="submit"> <a href= "/signup">SIGN UP</a></button>
+                <button type="submit"> <a href= "/signin">SIGN IN</a></button>
+                {% endif %}
+            
+
+
+
+         </form>
+     </div>
+
+</body>
+</html>

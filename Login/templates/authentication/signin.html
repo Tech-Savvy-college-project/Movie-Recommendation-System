@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Responsive Login Form Design</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+</head>
+<body>
+
+    
+    {% for message in messages %}
+    <div class="alert-{{ message.tags}} alert-dismissible fade show" role="alert">
+    <strong> Message: </strong> {{ message }}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"> 
+    <span aria-hidden="true">&times;</span>
+    </button>
+
+    </div>
+               {% endfor %}
+               
+             <h1> Login </h1>
+
+         <form  action="/signin" method="post">
+            {% csrf_token %}
+
+    
+                <label form=""> Username </label>
+                <input type="text" id="username" name="username" placeholder="Enter your username " required>
+                <br>
+
+
+                
+                <label form=""> Password </label>
+                <input type="password" id="pass1" name="pass1" placeholder="Enter your password " required>
+                <br>
+                
+
+                
+                <button type="submit">SIGN IN</button>
+
+
+         </form>
+
+
+
+</body>
+</html>
