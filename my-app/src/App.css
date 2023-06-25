@@ -1,0 +1,134 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+#logo-header{
+  width: 130px;
+  height: 70px;
+  padding-left: 10px;
+}
+#user-header {
+  width: 50px;
+  height: 40px;
+  border-radius: 50%; /* Make it round */
+  border: 1px solid #ffffff; /* Add a border */
+}
+
+.App-header {
+  background-color: #282c34;
+  font-size: 18px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 10px;
+}
+
+.nav-bar {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Global styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.nav-bar li {
+  margin: 0 10px;
+}
+
+.nav-bar a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-bar a:hover {
+  text-decoration: underline;
+}
+
+.main-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.column {
+  padding: 20px 0px 20px 0px;
+}
+
+.row {
+  margin-bottom: 2%;
+}
+
+.column:nth-child(1) {
+  width: 30%;
+}
+
+.column:nth-child(2) {
+  background-color: lightgray;
+  padding: 0px 50px 0px 50px;
+  width: 40%;
+}
+
+.column:nth-child(3) {
+  width: 30%;
+}
+
+
+h2 {
+  margin-bottom: 10px;
+}
+
+input {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+.row-scrollbar{
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 53%;
+  overflow-x: auto;
+}
+
+.scrollimg{
+  height: 150px;
+  width: 200px;
+  object-fit: fill; /* Adjust the value as needed */
+}
