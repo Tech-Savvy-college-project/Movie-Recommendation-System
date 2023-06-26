@@ -79,7 +79,7 @@ def popular(request):
     return Response(parse_movie_list(json_data))
 
 
-# /genres
+# /genres/
 @api_view(['GET'])
 def genre(request):
     
@@ -88,3 +88,20 @@ def genre(request):
     json_data = response.json()
 
     return Response(json_data)
+
+
+
+
+# /genres/movies/?with_genres={genre_id}
+@api_view(['GET'])
+def genreMovies(request):
+    genreID = request.GET.get('with_genres')
+    api_url = f"https://api.themoviedb.org/3/discover/movie?with_genres={genreID}&api_key={API_KEY}"
+    response = requests.get(api_url)
+    json_data = response.json()
+ 
+    return Response(parse_movie_list(json_data))
+
+
+
+
