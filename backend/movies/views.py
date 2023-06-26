@@ -62,7 +62,29 @@ def search(request):
     response = requests.get(api_url)
     json_data = response.json()
 
-    # return Response(json_data)
     return Response(parse_movie_list(json_data))
 
+
+
+
+# /movies/popular/
+@api_view(['GET'])
+def popular(request):
+    api_url = f"https://api.themoviedb.org/3/movie/popular?language=en-US&page=1&api_key={API_KEY}"
+
+    # Send a GET request to the TMDB API
+    response = requests.get(api_url)
+    json_data = response.json()
+
+    return Response(parse_movie_list(json_data))
+
+
+# /genres
+@api_view(['GET'])
+def genre(request):
     
+    api_url = f"https://api.themoviedb.org/3/genre/movie/list?language=en&api_key={API_KEY}"
+    response = requests.get(api_url)
+    json_data = response.json()
+
+    return Response(json_data)
