@@ -51,6 +51,7 @@ INSTALLED_APPS = [
 #    'accounts',
     # 'accounts.apps.AccountsConfig',
     'movies',
+    
     'users',
 #    'profiles',
 ]
