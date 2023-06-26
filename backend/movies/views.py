@@ -28,7 +28,7 @@ API_KEY = os.getenv('API_KEY_TMDB')
 
 # Create your views here.
 
-# /movies
+# /movies/ 
 @api_view()
 def movies_data(request):
 
@@ -37,7 +37,7 @@ def movies_data(request):
     return Response(serializer.data)
 
 
-# /movies/<tmdb-id>
+# /movies/<tmdb-id>/
 @api_view()
 def movie_detail(request,id):
     try: 
@@ -49,3 +49,20 @@ def movie_detail(request,id):
     return Response(serializer.data)
 
 
+
+
+
+# /movies/search/?q={your_query}
+@api_view(['GET'])
+def search(request):
+    query = request.GET.get('q')
+
+    api_url = f"https://api.themoviedb.org/3/search/movie?query={query}&include_adult=true&language=en-US&page=1&api_key={API_KEY}"
+    # Send a GET request to the TMDB API
+    response = requests.get(api_url)
+    json_data = response.json()
+
+    # return Response(json_data)
+    return Response(parse_movie_list(json_data))
+
+    
