@@ -6,6 +6,7 @@ from .serializers import MoviesSerializerInDB
 
 import requests
 from .utils import forMovieOutsideDB, parse_movie_list
+from . import recommend_util
 
 
 
@@ -105,3 +106,12 @@ def genreMovies(request):
 
 
 
+# /movies/recommend/?movie_name={name of movie}
+@api_view(['GET'])
+def recommend(request):
+    movie_name = request.GET.get('movie_name')
+    json_data = recommend_util.recommend(movie_name)
+
+
+
+    return Response(json_data)

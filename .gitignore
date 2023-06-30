@@ -9,6 +9,11 @@ migrations/
 *.pot
 *.pyc
 
+
+
+# pickle file
+*.pkl
+
 # Backup files
 
 *.bak 

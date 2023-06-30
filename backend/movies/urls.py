@@ -8,5 +8,6 @@ urlpatterns = [
     path('popular/', views.popular),
     path('genre/', views.genre),
     path('genre/movies/', views.genreMovies),
+    path('recommend/',views.recommend),
 
 ]

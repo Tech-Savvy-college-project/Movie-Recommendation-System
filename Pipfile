@@ -15,8 +15,13 @@ requests = "*"
 mysql-connector-python = "*"
 djangorestframework-simplejwt = "*"
 python-dotenv = "*"
+pandas = "*"
+numpy = "*"
+sklearn = "*"
+nltk = "*"
 
 [dev-packages]
+ipykernel = "*"
 
 [requires]
 python_version = "3.11"

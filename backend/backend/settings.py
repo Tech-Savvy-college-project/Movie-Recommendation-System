@@ -220,6 +220,7 @@ PASSWORD_RESET_TIMEOUT = 3600                   # 3600 Sec = 60 min = 1hr
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [BASE_DIR / "static"]  # new
+PKL_URL = 'movies/movies_list/'
 
 
 # Default primary key field type
