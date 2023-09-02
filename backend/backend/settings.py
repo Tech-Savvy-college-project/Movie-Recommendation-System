@@ -48,11 +48,12 @@ INSTALLED_APPS = [
     'corsheaders',
 
 
+    # apps
+    'movies',
+    'users',
 #    'accounts',
     # 'accounts.apps.AccountsConfig',
-    'movies',
-    
-    'users',
+    # 'users',
 #    'profiles',
 ]
 
@@ -109,27 +110,30 @@ WSGI_APPLICATION = 'backend.wsgi.application'
         # 'NAME': BASE_DIR / 'db.sqlite3',
     # }
 # }
+"""
 DATABASES = {
    'default': {
        'ENGINE': 'django.db.backends.mysql',
        'NAME': f'{os.getenv("DB_NAME")}',
+    #   'NAME': 'new_db',
        'HOST': f'{os.getenv("DB_HOST")}',
        'USER': f'{os.getenv("DB_USER")}',
        'PASSWORD': f'{os.getenv("DB_PASSWORD")}',
    }
 }
-
 """
 DATABASES = {
    'default': {
-       'ENGINE': 'django.db.backends.mysql',
-       'NAME': f'movies_db',
-       'HOST': f'localhost',
-       'USER': f'root',
-       'PASSWORD': f'saur3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'new_db',
+        'HOST': f'localhost',
+        'USER': f'root',
+        'PORT': '3306',
+        # 'PASSWORD': f'{os.getenv("DB_PASSWORD")}',
    }
 }
-"""
+
+
 
 
 # redis caching config files
@@ -141,7 +145,7 @@ CACHES = {
         "OPTIONS": {
             "CLIENT_CLASS": "django_redis.client.DefaultClient",
         },
-        "TIMEOUT": 3600,  # 1 hour
+        "TIMEOUT": 86400,  # 1 hour
 
     }
 }
@@ -203,6 +207,8 @@ SIMPLE_JWT = {
 }
 
 
+CORS_ORIGIN_ALLOW_ALL = True
+CORS_USER_MODEL = 'users.User'
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
@@ -218,8 +224,8 @@ PASSWORD_RESET_TIMEOUT = 3600                   # 3600 Sec = 60 min = 1hr
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = 'static/'
-STATICFILES_DIRS = [BASE_DIR / "static"]  # new
+STATIC_URL = '_static/'
+STATICFILES_DIRS = [BASE_DIR / "_static"]  # new
 PKL_URL = 'movies/movies_list/'
 
 
@@ -227,3 +233,4 @@ PKL_URL = 'movies/movies_list/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+AUTH_USER_MODEL = 'users.User'

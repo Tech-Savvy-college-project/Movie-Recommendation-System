@@ -21,7 +21,7 @@ def movie_information(tmdb_id):
 
     response = requests.get(url)
     data = json.loads(response.text)
-    cache.set("movie_data_{movie.tmdb_id}",data, timeout=3600)
+    cache.set(f"movie_data_{tmdb_id}",data, timeout=3600)
     return data
 
 
@@ -141,3 +141,27 @@ def parse_movie_list(jsonData):
 
     return data
 
+
+
+
+# parsing OrderedDict
+
+def parseOrderedDict(serializerData):
+    new = list()
+    for each in serializerData:
+        new.append(dict(each))
+
+    return new
+
+
+
+def parseMovies_and_TV_List(api_url):
+
+    response = requests.get(api_url)
+    json_data = response.json()
+
+    new = list()
+    for each in json_data["results"]:
+        new.append(forMovieOutsideDB(each["id"]))
+    # print(new)
+    return new

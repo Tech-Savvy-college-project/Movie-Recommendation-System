@@ -1,0 +1,6 @@
+mysql
+    create a db 
+    migrate from app 
+    load movie database using movies.csv file
+
+redis 

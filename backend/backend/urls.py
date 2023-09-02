@@ -14,12 +14,14 @@ from rest_framework_simplejwt.views import (
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('movies/', include('movies.urls')),
-    path('user/', include('authentication.urls')),
-    #path('api/user/',include('account.urls'))
+    path('', include('movies.urls')),
+    path('api/',include('users.urls')),
+    # path('user/', include('authentication.urls')),
+    # path('', )
+#    path('api/user/',include('account.urls'))
 #    path('api/user/',include('profiles.urls'))
 #    path('api/account/',include('accounts.urls')),
-   path('regi/',include('users.urls')),
+#    path('regi/',include('users.urls')),
 #    path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 #    path('movie')
 ]
