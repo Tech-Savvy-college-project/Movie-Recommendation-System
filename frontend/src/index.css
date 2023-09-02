@@ -1,0 +1,207 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-color: #000;
+}
+
+body {
+  font-family: "Baloo 2", cursive;
+  font-family: "Poppins", sans-serif;
+}
+
+.hero-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 7.68rem;
+  height: 8rem;
+  flex-shrink: 0;
+  background: #222;
+}
+
+.the-logo-img {
+  height: 6.4rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 8rem;
+  list-style: none;
+}
+
+.nav-links a {
+  display: inline-block;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 1rem;
+  background: #000;
+  padding: 0.8rem 3.2rem;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.search-box {
+  display: flex;
+  justify-content: center;
+}
+
+.search {
+  width: 64rem;
+  height: 4.8rem;
+  flex-shrink: 0;
+  border-radius: 2.2rem;
+  background: #fff;
+  padding: 1.6rem;
+  font-size: 1.6rem;
+  margin: 3.2rem 0;
+  border: none;
+}
+
+.movies-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 3.2rem;
+  justify-items: center;
+  padding: 6.4rem;
+}
+
+.movies-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  border: 1px solid #a60101;
+  background: rgba(255, 255, 255, 0.1);
+  width: 32rem;
+  padding: 3.2rem 2rem;
+}
+
+.mini-poster {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.mini-title,
+.mini-year,
+.mini-type {
+  color: #fff;
+}
+
+.mini-title {
+  font-size: 1.5rem;
+}
+
+.mini-year,
+.mini-type {
+  font-size: 1.5rem;
+}
+
+.movie-lil-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.mini-year span,
+.mini-type span {
+  display: inline-block;
+  padding: 0.32rem 0.6rem;
+  border-radius: 32rem;
+  background-color: red;
+}
+
+/*    MOVIE DETAILS     */
+
+.details-section {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+}
+
+.movie-details {
+  background-image: url("../public/login-image.jpg");
+  background-position: center;
+  padding: 3.2rem 6.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 11.2rem;
+}
+
+.movie-title {
+  color: #fff;
+  font-family: Baloo 2;
+  font-size: 6.4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.movie-desc p {
+  color: #fff;
+  font-family: Baloo 2;
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  font-size: 2.08rem;
+}
+
+.genre {
+  gap: 3.2rem;
+}
+
+.genre span {
+  padding: 1.6rem;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 1.5rem;
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.2) 0%,
+      rgba(0, 0, 0, 0.2) 100%
+    ),
+    rgba(217, 217, 217, 0.2);
+
+  color: #fff;
+  font-family: Baloo 2;
+  font-size: 1.92rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.other-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.other-details span {
+  color: #fff;
+  font-family: Baloo 2;
+  font-size: 2.56rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  font-size: 1.6rem;
+  border-bottom: 0.1rem solid #fff;
+  margin: 0.8rem;
+}
+
+.movie-poster {
+  height: 100vh;
+}
+
+.movie-poster img {
+  height: 100%;
+  width: 100%;
+  object-fit: fill;
+  object-position: center;
+}

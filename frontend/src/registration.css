@@ -1,0 +1,232 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.registration-container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 0.8fr 1fr;
+  background: #000;
+}
+
+.savy {
+  color: #fff;
+  font-family: Redressed;
+  font-size: 3.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  position: absolute;
+  margin: 2rem;
+}
+
+.registration-img-box {
+  overflow: hidden;
+}
+
+.back-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.unForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.the-logo {
+  width: 10rem;
+  height: 10rem;
+  flex-shrink: 0;
+}
+
+.login-text {
+  font-family: "Poppins", sans-serif;
+  font-size: 4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  background: linear-gradient(180deg, #f00 0%, rgba(255, 0, 0, 0) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.5s;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.registration-form-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8rem;
+  background-color: #000;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.input-name {
+  display: flex;
+  gap: 2rem;
+}
+
+.input-name input {
+  display: inline-flex;
+  padding: 0rem 9.0625rem 2.6875rem 1.25rem;
+  align-items: center;
+  padding: 1.2rem;
+  outline: none;
+  border: none;
+  background-color: #000;
+  border: 0.2rem solid #a9a9a9;
+  color: #a9a9a9;
+  font-family: Poppins;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  border-radius: 1rem;
+}
+
+.input-email input {
+  width: 100%;
+  padding: 1.2rem;
+  outline: none;
+  border: none;
+  background-color: #000;
+  border: 0.2rem solid #a9a9a9;
+  color: #a9a9a9;
+  font-family: Poppins;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  border-radius: 1rem;
+}
+
+.input-password input {
+  width: 100%;
+  padding: 1.2rem;
+  outline: none;
+  border: none;
+  background-color: #000;
+  border: 0.2rem solid #a9a9a9;
+  color: #a9a9a9;
+  font-family: Poppins;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  border-radius: 1rem;
+}
+
+.btn {
+  width: 100%;
+  height: 5rem;
+  flex-shrink: 0;
+  border-radius: 1.875rem;
+  background: linear-gradient(127deg, #ff1d1d 0%, rgba(184, 0, 0, 0) 100%);
+  border: none;
+  color: #fff;
+  color: #fff;
+  font-family: Poppins;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.btn:hover {
+  background-color: #fff;
+  color: #000;
+  font-size: 2.7rem;
+}
+
+.account-already {
+  display: flex;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.yes-account {
+  color: #a9a9a9;
+  font-family: Poppins;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.signin {
+  color: #fff;
+  font-family: Poppins;
+  font-size: 1.375rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+/* responsive */
+
+@media (max-width: 88rem) {
+  .registration-container {
+    height: 100%;
+    padding: 5rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0fr 1fr;
+  }
+}
+
+@media (max-width: 55rem) {
+  .input-name {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+  .savy {
+    display: none;
+  }
+}
+
+@media (max-width: 30rem) {
+  .input-name {
+    gap: 3rem;
+  }
+  form {
+    gap: 3rem;
+  }
+  .input-email input {
+    width: 90%;
+  }
+  .input-password input {
+    width: 90%;
+  }
+  .input-name input {
+    width: 90%;
+  }
+  .btn {
+    width: 90%;
+  }
+}
