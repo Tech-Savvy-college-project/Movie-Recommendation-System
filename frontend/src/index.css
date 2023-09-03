@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 body {
   height: 100vh;
   background-color: #000;
@@ -35,6 +39,17 @@ body {
   list-style: none;
 }
 
+.nav-links li span {
+  display: inline-block;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 1rem;
+  background: #000;
+  padding: 0.8rem 3.2rem;
+  color: #fff;
+  font-size: large;
+
+}
 .nav-links a {
   display: inline-block;
   font-weight: 700;
@@ -43,7 +58,7 @@ body {
   background: #000;
   padding: 0.8rem 3.2rem;
   color: #fff;
-  font-size: 1.5rem;
+  font-size: large;
 }
 
 .search-box {
@@ -63,6 +78,11 @@ body {
   border: none;
 }
 
+.sfm {
+  color: #fff;
+  margin: 3.2rem 8rem;
+}
+
 .movies-wrapper {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -74,11 +94,11 @@ body {
 .movies-container {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 2.4rem;
   border: 1px solid #a60101;
   background: rgba(255, 255, 255, 0.1);
   width: 32rem;
-  padding: 3.2rem 2rem;
+  padding: 3.2rem;
 }
 
 .mini-poster {
@@ -92,15 +112,6 @@ body {
 .mini-year,
 .mini-type {
   color: #fff;
-}
-
-.mini-title {
-  font-size: 1.5rem;
-}
-
-.mini-year,
-.mini-type {
-  font-size: 1.5rem;
 }
 
 .movie-lil-detail {

@@ -102,8 +102,7 @@ def popular(request):
 
     movies = [item for sublist in [movie_list1, movie_list2, movie_list3] for item in sublist] 
     
-    # return render(request, "web/index.html",{"movies": movies})
-    return Response({"popular_movies": movies})
+    return Response({"popular_movies": movie_list1})
     return Response(parseMovies_and_TV_List(movies))
 
 
@@ -122,7 +121,6 @@ def upcoming(request):
 
     # movies = [item for sublist in [movie_list1, movie_list2, movie_list3] for item in sublist] 
     
-    # return render(request, "web/index.html",{"movies": movie_list})
     return Response(movie_list)
 
 
@@ -173,11 +171,3 @@ def recommend(request):
 
     return Response(json_data)
 
-
-
-
-
-# user
-def loginPage(request):
-    pass
-    # return render(request,"web/login_register.html")

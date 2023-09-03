@@ -101,16 +101,7 @@ TEMPLATES = [
 WSGI_APPLICATION = 'backend.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-# DATABASES = {
-    # 'default': {
-        # 'ENGINE': 'django.db.backends.sqlite3',
-        # 'NAME': BASE_DIR / 'db.sqlite3',
-    # }
-# }
-"""
 DATABASES = {
    'default': {
        'ENGINE': 'django.db.backends.mysql',
@@ -119,17 +110,6 @@ DATABASES = {
        'HOST': f'{os.getenv("DB_HOST")}',
        'USER': f'{os.getenv("DB_USER")}',
        'PASSWORD': f'{os.getenv("DB_PASSWORD")}',
-   }
-}
-"""
-DATABASES = {
-   'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'new_db',
-        'HOST': f'localhost',
-        'USER': f'root',
-        'PORT': '3306',
-        # 'PASSWORD': f'{os.getenv("DB_PASSWORD")}',
    }
 }
 
@@ -207,7 +187,27 @@ SIMPLE_JWT = {
 }
 
 
-CORS_ORIGIN_ALLOW_ALL = True
+CORS_ALLOW_ALL_ORIGINS = False
+CORS_ALLOW_HEADERS = [
+    'accept',
+    'accept-encoding',
+    'authorization',
+    'content-type',
+    'dnt',
+    'origin',
+    'user-agent',
+    'x-csrftoken',
+    'x-requested-with',
+]
+
+CORS_ALLOW_CREDENTIALS = True
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",  # Add the origins you want to allow here
+]
+
+
+
 CORS_USER_MODEL = 'users.User'
 
 CORS_ALLOWED_ORIGINS = [
